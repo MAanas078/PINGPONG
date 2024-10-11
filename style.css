@@ -1,0 +1,136 @@
+/* General Body Styles */
+body {
+    background-image: url('images/background.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    font-family: 'Press Start 2P', cursive; /* Arcade font */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height for the body */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Game Board Styles */
+#gameBoard {
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.2); /* Add glowing effect */
+    position: relative; /* For positioning elements like paddles */
+}
+
+/* Game Container */
+#gameContainer {
+    text-align: center;
+    width: 500px; /* Fixed width for stability */
+    height: 600px; /* Fixed height for stability */
+    position: relative; /* For absolute positioning of elements */
+}
+
+/* Score Text Styles */
+#scoreText {
+    font-size: 100px;
+    color: #fff;
+    animation: pulse 0.5s infinite alternate; /* Score pulsing effect */
+}
+
+/* Reset Button Styles */
+#resetBtn {
+    font-size: 22px;
+    width: 100px;
+    height: 50px;
+    border: 3px solid;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#resetBtn:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Adding retro-style animation for the score */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        color: white;
+    }
+    to {
+        transform: scale(1.1);
+        color: #ff6347; /* Tomato color on animation */
+    }
+}
+
+/* Game Over Message Styles */
+#gameOver {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: #ff6347; /* Tomato color */
+    animation: fadeIn 1s; /* Fade-in animation */
+}
+
+/* Animation for fading in the game over message */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Paddle Styles */
+.paddle {
+    width: 25px;
+    height: 100px;
+    background-color: lightblue; /* Paddle color */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Paddle hover effect */
+.paddle:hover {
+    background-color: #66ccff; /* Change color on hover */
+}
+
+/* Ball Animation */
+@keyframes ballBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Bounce effect */
+    }
+}
+
+/* Game Board focused state for bounce effect */
+#gameBoard:focus-within {
+    animation: ballBounce 0.5s infinite; /* Infinite bounce effect when focused */
+}
+
+/* Play Again Button Styles */
+#playAgainBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green background */
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+/* Play Again Button hover effect */
+#playAgainBtn:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.1); /* Scale up on hover */
+}
