@@ -1,0 +1,38 @@
+<!-- Code Reference from Brocode -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Ping Pong Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="gameContainer">
+
+        <canvas id="gameBoard" width="500" height="500"></canvas>
+
+        <div id="scoreText">0 : 0</div>
+
+        <button id="resetBtn">Reset</button>
+        
+        <div id="gameOver" style="display: none;">
+            <h2>Game Over</h2>
+            <button id="playAgainBtn">Play Again</button>
+        </div>
+
+        <!-- Adding sound effects -->
+        <audio id="hitSound" src="assets/hit.mp3"></audio>
+        <audio id="scoreSound" src="assets/score.mp3"></audio>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
